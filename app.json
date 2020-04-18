@@ -1,0 +1,31 @@
+{
+  "name": "Practical Sign in with Apple Sample",
+  "description": "A example to integrate Sign in with Apple on web platform",
+  "repository": "https://github.com/sarunw/practical-siwa-web",
+  "env": {
+    "CLIENT_ID": {
+      "description": "Service ID of your application.",
+      "required": true
+    },
+    "SCOPE": {
+      "description": "Requested scope, seperate by space.",
+      "required": true
+    },
+    "REDIRECT_URI": {
+      "description": "Redirect URI, should be https://[your-heroku-app-name].herokuapp.com/redirect for this tutorial.",
+      "required": true
+    },
+    "PRIVATE_KEY": {
+      "description": "Private key generate from Apple Developer.",
+      "required": false
+    },
+    "KID": {
+      "description": "Key ID you get with a private key.",
+      "required": false
+    },
+    "TEAM_ID": {
+      "description": "Team ID.",
+      "required": false
+    }    
+  }
+}

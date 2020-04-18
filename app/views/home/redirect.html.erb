@@ -1,0 +1,24 @@
+<h1>Redirect Completed</h1>
+
+<h2>Code</h2>
+<p><%= @code %></p>
+
+<h2>State(<%= session[:state] %>)</h2>
+<p><%= @state %></p>
+
+<h2>ID Token</h2>
+<p><%= @id_token %></p>
+
+<h2>User</h2>
+<% if @user.nil? %>
+  User object only return the first time you sign in. <a href="https://support.apple.com/en-us/HT210426#stopusingappleid">Stop Using your Apple ID with an app</a> and try again to see it.
+<% else %>
+  <p><%= @user %></p>
+<% end %>
+
+
+<h2>Decoded Token</h2>
+<p><%= @decoded_token  %></p>
+
+<h2>Token Response</h2>
+<p><%= @token_response  %></p>

@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PracticalSiwaWeb</title>
+    <title>Practical Sign in with Apple</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="appleid-signin-client-id" content="<%= ENV['CLIENT_ID'] %>">
+    <meta name="appleid-signin-scope" content="<%= ENV['SCOPE'] %>">
+    <meta name="appleid-signin-redirect-uri" content="<%= ENV['REDIRECT_URI'] %>">
+    <meta name="appleid-signin-state" content="<%= session[:state] %>"> 
   </head>
 
   <body>
     <%= yield %>
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
   </body>
 </html>
